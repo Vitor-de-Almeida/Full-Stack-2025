@@ -18,19 +18,34 @@ import http from 'http'
 // GET /users => Buscando usuários no back-end
 // POST /users => Criar um usuário no back-end
 
-const server = http.createServer((require,response) => {
-    const {method, url} = require
+// JSON - JavaScript Object Notation
+
+//Cabeçalhos (Requisição/reposta) => Metadados
+
+//HTTP Status Code
+
+const users = []
+
+const server = http.createServer((request,response) => {
+    const {method, url} = request
 
     if (method === 'GET' && url === '/users') {
-        return response.end('Listagem de usuários')
+        return response
+        .setHeader('Content-type', 'application/json')
+        .end(JSON.stringify(users))
     }
 
     if (method === 'POST' && url === '/users') {
-        return response.end('Criação de usuário')
+        users.push({
+            id: 1,
+            name:'John Doe',
+            email: 'johndoe@example.com'
+        })
+        return response.writeHead(201).end()
     }
 
 
-    return response.end('Hello Baby')
+    return response.writeHead(404).end('Not found')
 })
 
 server.listen(3333)
