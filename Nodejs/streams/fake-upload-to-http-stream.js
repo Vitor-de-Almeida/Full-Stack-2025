@@ -19,4 +19,8 @@ class OneToHundredStream extends Readable {
 fetch('http://localhost:3334', {
     method:'POST',
     body: new OneToHundredStream(),
+    headers: {
+     'Content-Type': 'text/plain'
+     },
+     duplex: 'half' // NECESSÁRIO no Node.js!
 })
