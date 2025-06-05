@@ -1,0 +1,22 @@
+main {
+    padding-block: 24px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+section img {
+  flex: 1 1 auto;  
+  max-width: 286px;
+  width: 100%;           /* ocupa toda a célula */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+
+}
+

@@ -1,0 +1,14 @@
+footer nav {
+    display: flex;
+    margin-block: 16px;
+}
+
+.nav-left {
+    margin: left;
+    flex: 1 1 80%;
+}
+
+.nav-right {
+    margin: right;
+    flex: 1 1 20%;
+}

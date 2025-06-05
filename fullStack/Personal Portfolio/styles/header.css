@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-side {
+    display: flex;
+    width: 592px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;;
+    margin-block: 32px;
+    padding-right: 16px;
+}
+
+h1 {
+    color: var(--text-color-primary);
+}
+
+p {
+    text-align: justify;
+    font: var(--text-p-md);
+}
+
+.left-side {
+    width: 280px;
+    height: auto;
+}
+
+.left-side li{
+    display: flex;
+    gap: 8px;
+}
+
+.left-side li:nth-child(2) {
+    padding-block:16px;
+}
+
+header ul {
+    list-style: none;
+}
+
+nav ul img {
+    border-radius: 8px;
+}
+
+header div img {
+    border-radius: 8px;
+}
