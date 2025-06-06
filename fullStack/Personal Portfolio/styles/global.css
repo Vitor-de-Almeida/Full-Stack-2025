@@ -44,7 +44,6 @@ a:hover {
 .container {
     padding-inline: 32px;
     margin-inline: auto;
-
 }
 
 .header-color {
@@ -92,12 +91,22 @@ img {
         text-align: center;
     }
 
-footer nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-}
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    footer nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    }
+    .header-color {
+        min-width: 100%;
+        background-color: var(--surface-color);
+    }
 
 }
