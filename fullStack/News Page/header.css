@@ -1,0 +1,31 @@
+.primary-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 20px;
+}
+
+a {
+    color: var(--text-color-primary);
+    font: var(--text-font-heading2);
+    display: flex;
+    gap: 8px;
+}
+
+nav > a > h1 {
+    color: var(--brand-color-light);
+    font: var(--text-font-heading1);
+}
+
+.secondary-nav {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--brand-color-light);
+    border-bottom: 1px solid var(--brand-color-light);
+    padding-block: 14px;
+
+}
+
+
+
+

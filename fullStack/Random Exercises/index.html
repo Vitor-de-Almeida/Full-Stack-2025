@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            border: 1px solid green;
+            grid-area: H;
+        }
+        main {
+            border: 1px solid red;
+            grid-area: M;
+        }
+        aside {
+            border: 1px solid blue;
+            grid-area: A;
+        }
+        footer {
+            border: 1px solid purple;
+            grid-area: F;
+        }
+
+        body {
+            display: grid;
+            grid-template: 
+            "H H H" 25%
+            "M M A" 20%
+            "F F F" 55% / 400px 20px 10px 200px; 
+
+            height: 100VH;
+            gap: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        1
+    </header>
+    <main>
+        2
+    </main>
+    <aside>
+        3
+    </aside>
+    <footer>
+        4
+    </footer>
+</body>
+</html>

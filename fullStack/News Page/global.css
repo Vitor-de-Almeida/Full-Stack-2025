@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box; /*Making zero standard margins and paddings*/
+}
+
+:root {
+    --brand-color-light: #60A5FA;
+    --brand-color-dark: #1D4ED8; /* Seeting Standards*/
+    --bg-color: #0F172A;
+    --stroke-color: #1E293B;
+    --text-color-primary: #F1F5FF;
+    --text-color-secondary: #CBD5E1;
+    --text-font-family: "Archivo", sans-serif;
+    --text-font-heading1: 800 24px/135% var(--text-font-family);
+    --text-font-heading2: 700 16px/140% var(--text-font-family);
+    --text-font-heading3: 800 14px/140% var(--text-font-family);
+    --text-font-span: 400 14px/145% var(--text-font-family);
+    --text-font-paragraph: normal 14px/160% var(--text-font-family);
+}   
+
+body {
+    color:var(--text-color-primary);
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-inline:32px;
+}
