@@ -44,10 +44,66 @@ button {
     width: 160px;
     height: 44px;
     border-radius: 12px;
+    border: 1px solid transparent;
     color: var(--always-white);
     background-color: var(--color-brand);
     font: var(--link);
 }
+
+.boxes {
+    position: absolute;
+    width: 627px;
+    height: auto;
+    left: 27%;
+    top: 319px;
+
+}
+
+.boxes input {
+    width: 16px;
+    height: 16px;
+}
+
+.boxes label {
+    display: none;
+    grid-template-columns: 16px 3fr 1fr;
+    align-items: center;
+    padding: 12px 8px;
+    column-gap: 12px;
+    border-radius: 12px;
+    background-color: var(--always-white);
+}
+
+.boxes label > :last-child {
+    display: flex;
+    justify-self:flex-end;
+    margin-right: 12px;
+    width: 32px;
+    height: 24px;
+}
+
+.boxes > .error {
+    margin-block: 16px;
+    display: none;
+    grid-template-columns: 16px 3fr 1fr;
+    align-items: center;
+    padding: 12px;
+    column-gap: 12px;
+    border-radius: 12px;
+    background-color: var(--color-danger);
+    color: var(--always-white);
+    font: var(--link);
+
+}
+
+.boxes .error > :last-child {
+    display: flex;
+    justify-self:flex-end;
+    margin-right: 8px;
+    width: 32px;
+    height: 24px;
+}
+
 
 
 
