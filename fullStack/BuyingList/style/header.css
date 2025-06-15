@@ -1,0 +1,17 @@
+header {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 7px;
+position: absolute;
+width: 155.51px;
+height: 40px;
+left: 44%;
+top: 25px;
+}
+
+header h1 {
+color: var(--content-secondary);
+font: var(--title);
+}
+
