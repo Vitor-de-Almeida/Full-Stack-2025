@@ -65,7 +65,7 @@ button {
 }
 
 .boxes label {
-    display: none;
+    display: grid;
     grid-template-columns: 16px 3fr 1fr;
     align-items: center;
     padding: 12px 8px;
@@ -84,7 +84,7 @@ button {
 
 .boxes > .error {
     margin-block: 16px;
-    display: none;
+    display: grid;
     grid-template-columns: 16px 3fr 1fr;
     align-items: center;
     padding: 12px;
@@ -98,7 +98,7 @@ button {
 
 .boxes .error > :last-child {
     display: flex;
-    justify-self:flex-end;
+    justify-self: flex-end;
     margin-right: 8px;
     width: 32px;
     height: 24px;
