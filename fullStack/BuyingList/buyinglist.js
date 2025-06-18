@@ -8,7 +8,7 @@ button.addEventListener('click', (e) => {
     const itemValue = addItem.value.trim()
     
     const id =`${Date.now()}-item`
-    
+    if (itemValue) {
     const itemHTML = `
         <div class="item">
           <label for="${id}">
@@ -23,18 +23,38 @@ button.addEventListener('click', (e) => {
 
     boxes.insertAdjacentHTML('beforeend', itemHTML)
     addItem.value = '';
+    }
+   
 })
 
 
 boxes.addEventListener('click', (e) => {
     if (e.target.closest('.delete')) {
         e.target.closest('.item').remove();
-    }
-
     if (errorBox) {
         errorBox.style.display ='grid';
         setTimeout(() => {
             errorBox.style.display = 'none';
         }, 2000);
     }
+    }
+
+  
 });
+
+
+function removerSelecionados() {
+  const checkboxes = document.querySelectorAll('.item input[type="checkbox"]:checked');
+
+  checkboxes.forEach((checkbox) => {
+    const item = checkbox.closest('.item');
+    if (item) {
+      item.remove();
+    }
+  });
+}
+
+const buttonDeleteSelecionados = document.getElementById('removerSelecionados')
+
+buttonDeleteSelecionados.addEventListener('click', removerSelecionados)
+
