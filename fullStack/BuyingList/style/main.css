@@ -9,6 +9,7 @@
     display: flex;
     align-items: center; 
     column-gap: 8px;
+    cursor: pointer;
 }
 
 .second-box {
@@ -48,6 +49,11 @@ button {
     color: var(--always-white);
     background-color: var(--color-brand);
     font: var(--link);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-brand-hover);
 }
 
 .boxes {
@@ -56,35 +62,51 @@ button {
     height: auto;
     left: 27%;
     top: 319px;
-
+    display: flex;
+    flex-direction: column;
 }
 
-.boxes input {
+/* Checkbox */
+input[type="checkbox"] {
     width: 16px;
     height: 16px;
+    accent-color: var(--color-brand);
+    cursor: pointer;
 }
 
-.boxes label {
+input[type="checkbox"]:hover {
+    border: 1px solid var(--border-hover);
+}
+
+.item {
     display: grid;
-    grid-template-columns: 16px 3fr 1fr;
+    grid-template-columns: 16px 1fr 24px;
     align-items: center;
     padding: 12px 8px;
     column-gap: 12px;
     border-radius: 12px;
+    border: 1px solid var(--border-primary);
     background-color: var(--always-white);
+    margin-bottom: 12px;
 }
 
-.boxes label > :last-child {
-    display: flex;
-    justify-self:flex-end;
+.item:hover {
+    border: 1px solid var(--border-hover);
+}
+
+.item label {
+    display: contents;
+}
+
+.item svg {
+    cursor: pointer;
+    justify-self: flex-end;
     margin-right: 12px;
-    width: 32px;
-    height: 24px;
 }
 
-.boxes > .error {
+.error {
     margin-block: 16px;
-    display: grid;
+    display: none;
     grid-template-columns: 16px 3fr 1fr;
     align-items: center;
     padding: 12px;
@@ -93,30 +115,15 @@ button {
     background-color: var(--color-danger);
     color: var(--always-white);
     font: var(--link);
-
+    position: relative;
+    bottom: -350px;
 }
 
-.boxes .error > :last-child {
+.error > :last-child {
     display: flex;
     justify-self: flex-end;
     margin-right: 8px;
     width: 32px;
     height: 24px;
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
