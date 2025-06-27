@@ -12,9 +12,9 @@
     --text-color-primary: #F1F5FF;
     --text-color-secondary: #CBD5E1;
     --text-font-family: "Archivo", sans-serif;
-    --text-font-heading1: 800 24px/135% var(--text-font-family);
-    --text-font-heading2: 700 16px/140% var(--text-font-family);
-    --text-font-heading3: 800 14px/140% var(--text-font-family);
+    --h1: 800 24px/135% var(--text-font-family);
+    --h2: 700 16px/140% var(--text-font-family);
+    --h3: 800 14px/140% var(--text-font-family);
     --text-font-span: 400 14px/145% var(--text-font-family);
     --text-font-paragraph: normal 14px/160% var(--text-font-family);
 }   
@@ -36,4 +36,5 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
 

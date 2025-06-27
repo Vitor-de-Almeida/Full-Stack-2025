@@ -1,0 +1,54 @@
+.text-2xl {
+    font: var(--h1);
+}
+
+.text-xl {
+    font: var(--h2);
+}
+
+.text-lg {
+    font: var(--h3);
+}
+
+.content-tag {
+    display: inline-block;
+    background-color: var(--brand-color-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font: 500 10px/1.2 var(--text-font-family);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 4px 16px #02061740;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    &::before {
+        content:"";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #020617
+        );
+    }
+     figcaption {
+        position: absolute;
+        bottom: 0;
+        padding: 24px;
+
+        &:has(.text-lg) {
+            padding: 12px;
+        }
+        h2 {
+            margin-top: 8px;
+            text-align: justify;
+            hyphens: auto;
+            word-break: break-word;
+        }
+    }
+}
