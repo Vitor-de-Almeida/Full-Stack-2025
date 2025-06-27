@@ -1,4 +1,4 @@
-.primary-section {
+.standard-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 16px;
@@ -19,5 +19,45 @@
         border-radius: 4px;
     }
 }
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.first-box {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--brand-color-light);
+}
+
+.second-box {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.second-box span {
+    position: absolute;
+    margin: 8px;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+}
+
+.second-box p {
+    text-align: justify;
+    margin-top: 8px;
+}
+
+
+
+
 
 
