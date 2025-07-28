@@ -1,6 +1,6 @@
 <?php
 
-var_dump($_GET)
+$id = $_REQUEST['id'];
 
 ?>
 
@@ -28,7 +28,7 @@ var_dump($_GET)
         </nav>
     </header>
     <main class="mx-auto max-w-screen-lg space-y-6">
-        
+        ID do livro: <?=$id?>
     </main>
 </body>
 </html>
