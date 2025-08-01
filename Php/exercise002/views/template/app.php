@@ -22,14 +22,7 @@
         </nav>
     </header>
     <main class="mx-auto max-w-screen-lg space-y-6">
-        <form class="w-full flex space-x-2 mt-6">
-            <input type="text" class="border-stone-800 border-2 rounded-md bg-stone-900 text-base focus:outline-none px-2 py-1" placeholder="Pesquisar">
-            <button type="submit">🔎</button>
-        </form>
-        <!-- Lista de Livros -->
-        <section class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <?php var_dump($view); ?>;
-        </section>
+        <?php require "views/{$view}.view.php"; ?>;
     </main>
 </body>
 </html>
