@@ -1,16 +1,13 @@
 <?php
 
-require 'dados.php';
+$uri = $_SERVER['PATH_INFO'] ?? '/'; // se não existir, define como "/"
+$uri = trim($uri, '/');              // remove barras só do início/fim
 
-$view = 'index';
+$controller = $uri ?: 'index';       // se vazio, cai para 'index'
 
-$uri =($_SERVER['REQUEST_URI']);
+var_dump($controller);
 
-$view = str_replace('/', '', $uri );
-
-
-
-require "views/template/app.php";
+require "controllers/{$controller}.controller.php";
 
 ?>
 

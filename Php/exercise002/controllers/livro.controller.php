@@ -1,5 +1,5 @@
 <?php
-
+//Model
 require 'dados.php';
 
 $id = (int) $_REQUEST['id'];
