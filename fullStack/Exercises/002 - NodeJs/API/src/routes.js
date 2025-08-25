@@ -19,12 +19,11 @@ export const routes = [
         method:"DELETE",
         path:"/products/:id",
         controller: (request, response) => {
-            return response.end("Item removido")
+            return response.end("Produto removido com ID: " + request.params.id)
         }
     }
 ].map((route) => (
     {
-    ...route,
-    path:parseRoutePath(route.path)
+    ...route, path:parseRoutePath(route.path)
     }
 ))

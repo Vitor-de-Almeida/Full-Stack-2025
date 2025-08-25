@@ -2,14 +2,6 @@
 
 /*Representação de 1 regstro de banco de dados em forma de classe*/
 
-class Livro {
-
-    public $id;
-    public $titulo;
-    public $autor;
-    public $descricao;
-};
-
 class DB {
 
     public function livros () {
