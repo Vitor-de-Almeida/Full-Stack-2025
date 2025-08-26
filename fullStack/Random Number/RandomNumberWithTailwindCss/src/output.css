@@ -467,6 +467,9 @@
   .bg-\[linear-gradient\(to_bottom\,_rgba\(0\,0\,0\,1\)_0\%\,_rgba\(0\,0\,0\,0\.9\)_30\%\,_rgba\(0\,0\,0\,0\.8\)_60\%\,_rgba\(0\,0\,0\,0\.6\)_80\%\,_rgba\(0\,0\,0\,0\.4\)_100\%\)\] {
     background-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.4) 100%);
   }
+  .bg-\[repeating-linear-gradient\(to_right\,rgba\(2\,1\,1\,0\.14\)_0_120px\,transparent_120px_160px\)\] {
+    background-image: repeating-linear-gradient(to right,rgba(2,1,1,0.14) 0 120px,transparent 120px 160px);
+  }
   .bg-\[repeating-linear-gradient\(to_right\,rgba\(27\,1\,1\,0\.14\)_0_80px\,transparent_80px_120px\)\] {
     background-image: repeating-linear-gradient(to right,rgba(27,1,1,0.14) 0 80px,transparent 80px 120px);
   }
@@ -512,11 +515,17 @@
   .bg-\[repeating-linear-gradient\(to_right\,rgba\(111\,1\,1\,0\.54\)_0_80px\,transparent_80px_120px\)\] {
     background-image: repeating-linear-gradient(to right,rgba(111,1,1,0.54) 0 80px,transparent 80px 120px);
   }
+  .bg-\[repeating-linear-gradient\(to_right\,rgba\(126\,1\,1\,0\.14\)_0_120px\,transparent_120px_160px\)\] {
+    background-image: repeating-linear-gradient(to right,rgba(126,1,1,0.14) 0 120px,transparent 120px 160px);
+  }
   .bg-\[repeating-linear-gradient\(to_right\,rgba\(197\,141\,231\,0\.14\)\,transparent_80px_120px\)\] {
     background-image: repeating-linear-gradient(to right,rgba(197,141,231,0.14),transparent 80px 120px);
   }
   .bg-\[repeating-linear-gradient\(to_right\,rgba\(197\,141\,231\,0\.14\)_0_80px\,transparent_80px_120px\)\] {
     background-image: repeating-linear-gradient(to right,rgba(197,141,231,0.14) 0 80px,transparent 80px 120px);
+  }
+  .bg-\[repeating-linear-gradient\(to_right\,rgba\(200\,1\,1\,0\.14\)_0_120px\,transparent_120px_160px\)\] {
+    background-image: repeating-linear-gradient(to right,rgba(200,1,1,0.14) 0 120px,transparent 120px 160px);
   }
   .bg-\[repeating-linear-gradient\(to_right\,rgba\(222\,1\,1\,0\.54\)_0_80px\,transparent_80px_120px\)\] {
     background-image: repeating-linear-gradient(to right,rgba(222,1,1,0.54) 0 80px,transparent 80px 120px);
