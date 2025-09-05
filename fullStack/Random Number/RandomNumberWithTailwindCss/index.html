@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
-    <div class="relative w-full h-screen bg-cover bg-center bg-black " style="background-image: url(img/backgroundimage.png);">
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent">
-            <div class="main-cont w-4/5 mx-auto">
+    <div class="relative w-full min-h-screen bg-cover bg-center bg-black " style="background-image: url(img/backgroundimage.png);">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent"> 
+            <div class="main-cont w-4/5 mx-auto ">
                 <div class="flex my-36 justify-start items-center gap-2">
                     <div class="imagem-tittle">
                         <img class="w-[38px] h-[38px] object-contain" src="img/frameTittle.png" alt="Tittle">
@@ -18,46 +18,45 @@
                         <p class="font-extrabold font-sora text-2xl uppercase">numbers</p>
                     </div>
                 </div>
-                <div class="text-white flex flex-row justify-around bg-green-700 gap-x-28">
-                    <div class="left-content w-1/2 bg-blue-600 ">
+                <div class="text-white flex flex-col sm:flex-row justify-between gap-x-8 sm:gap-x-28">
+                    <div class="left-content w-full md:w-1/2 ">
                         <header>
-                            <p class="uppercase font-sora text-overline text-content-secondary">
+                            <p class="uppercase font-sora text-overline word-space text-content-secondary">
                                 online - gratuito
                             </p>
-                            <h1 class="font-sora text-display-large uppercase">
+                            <h1 class="font-sora text-display-large text-content-primary uppercase my-4">
                                 sorteador <br>   de números
                             </h1>
                         </header>
                         <section>
                             <article>
                                 <div>
-                                    <div>
-                                        <img src="" alt="">
-                                    </div>
-                                    <div>
-                                        <p>Como funciona o sorteador de números?</p>
+                                    <div class="flex gap-x-2">
+                                        <img src="img/littleManFrame.png" alt="Info Emoji" class="w-[20px] h-[20px]">
+                                        <p class="text-content-brand text-paragraph-large">Como funciona o sorteador de números?</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                                    <p class="text-content-secondary text-paragraph-medium">O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
                                 </div>
                             </article>
-                            <article>
+                            <article class="mt-8">
                                  <div>
                                     <div>
                                         <img src="" alt="">
                                     </div>
-                                    <div>
-                                        <p>Posso escolher o intervalo dos números?</p>
+                                    <div class="flex gap-x-2">
+                                        <img src="img/littleManFrame.png" alt="Info Emoji" class="w-[20px] h-[20px]">
+                                        <p class="text-content-brand text-paragraph-large">Posso escolher o intervalo dos números?</p>
                                     </div>
-                                </div>
-                                <div>
-                                    <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
-                                </div>
+                                    </div>
+                                    <div>
+                                    <p class="text-content-secondary text-paragraph-medium">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                                    </div>
                             </article>
                         </section>
                     </div>
-                    <div class="right-content w-1/2 bg-red-600">
+                    <div class="right-content w-full md:w-1/2 bg-red-600">
                         <p>asdasd</p>
                     </div>
                 </div>
