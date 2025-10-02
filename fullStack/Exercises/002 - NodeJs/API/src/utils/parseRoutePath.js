@@ -5,5 +5,5 @@ export function parseRoutePath(path) {
 
     const pathRegex = new RegExp(`^${params}$`)
 
-    return pathRegex
+    return pathRegex 
 }
