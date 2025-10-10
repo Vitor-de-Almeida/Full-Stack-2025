@@ -1,16 +1,24 @@
 {
   "products": [
     {
-      "name": "xdxd",
-      "price": 652
-    },
-    {
-      "name": "xdxd",
+      "name": "teclado",
       "price": 652
     },
     {
       "name": "teclado",
       "price": 652
+    },
+    {
+      "name": "teclado",
+      "price": 652
+    },
+    {
+      "name": "teclado",
+      "price": 652
+    },
+    {
+      "name": "monitor",
+      "price": 750
     }
   ]
 }
