@@ -1,0 +1,22 @@
+{
+  "tickets": [
+    {
+      "id": "b75ba2bb-4ed4-4f2b-88e4-6b00255caafc",
+      "equipment": "Computer",
+      "description": "Computer does not turn on",
+      "user_name": "Vitor Renan",
+      "status": "open",
+      "created_at": "2025-10-13T13:29:49.941Z",
+      "updated_at": "2025-10-13T13:29:49.941Z"
+    },
+    {
+      "id": "78cce250-b126-45ef-9a1e-ac209a864e48",
+      "equipment": "keyboard",
+      "description": "the space button are not working",
+      "user_name": "Vitor Renan",
+      "status": "open",
+      "created_at": "2025-10-13T13:41:11.918Z",
+      "updated_at": "2025-10-13T13:41:11.918Z"
+    }
+  ]
+}
