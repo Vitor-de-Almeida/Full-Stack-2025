@@ -74,6 +74,11 @@ h1, h2, h3 {
     }
 }
 
+.header-title {
+    margin-bottom: 1rem;
+    color: #439DFF;
+}
+
 .language-item {
     display: flex;
     flex-direction: column;
@@ -201,7 +206,36 @@ h1, h2, h3 {
 .header-content h1 {
     font-size: var(--font-size-title);
     font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.header-content h2 {
+    font-size: var(--font-size-subtitle);
+    font-weight: 400;
     margin-bottom: 1rem;
+    color: #3883EB;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.header-content p {
+    font-size: var(--font-size-text);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-content p {
+    font-size: var(--font-size-text);
+    font-family: var(--font-family-text);
+    font-weight: 400;
+    margin-block: 1rem;
+    text-align: justify;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  
+    padding-inline: 1rem;
+    text-indent: 1.5rem; /* espaço na primeira linha */
+    line-height: 1.5; /* espaço entre linhas */
+    
 }
 
 .main-content {
@@ -216,6 +250,54 @@ h1, h2, h3 {
     background-color: var(--background-color-background);
     padding: 1rem;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aside-content h3 {
+    font-size: var(--font-size-subtitle);
+    color: var(--tittle-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-bottom: 2px solid #3883EB;
+    padding-bottom: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--background-color-focus);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(56, 131, 235, 0.3);
+    background-color: rgba(56, 131, 235, 0.1);
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.contact-item span {
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .footer {
