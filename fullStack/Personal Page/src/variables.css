@@ -1,0 +1,13 @@
+:root {
+  --tittle-color: #FFFFFF;
+  --text-color: #FFFFFF;
+  --background-color-dominant: #010409;
+  --background-color-background: #0D1117;
+  --background-color-focus: #161B22;
+  --font-size-text: 16px;
+  --font-size-title: 24px;
+  --font-size-subtitle: 18px;
+  --font-size-small: 12px;
+  --font-family-text: 'Roboto', sans-serif;
+}
+
