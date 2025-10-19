@@ -23,6 +23,38 @@
                 <p>
                     Fill in the data below to register your child in the school of early education.
                 </p>
+                <form method="post" encType="multipart/form-data">
+                    <fieldset class="child-info">
+                        <legend>Child information</legend>
+                        <div class="input-wrapper">
+                            <label for="fullname">Full name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter child's full name">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="birthdate">Birth date</label>
+                            <input type="date" id="birthdate" name="birthdate" placeholder="Enter child's birth date">
+                        </div>
+                        <div class="select-wrapper">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="textarea-wrapper">
+                            <label for="medica-information">Medical information</label>
+                            <textarea id="medica-info" name="medica-info" cols="30" rows="10" placeholder="Enter child's medical information that school needs to know(if the child has any allergies, medical conditions, etc.)"></textarea>
+                        </div>
+                        <div class="drop-area-wrapper">
+                            <input type="file" id="birth-file" name="birth-file" accept="image/*">
+                            <img src="assets/icons/cloud-upload.svg" alt="Upload icon">
+                        </div>
+                        <p>
+                            Click or drag and drop the file here
+                        </p>
+                    </fieldset>
+                </form>
             </div>
         </main>
         <aside>
