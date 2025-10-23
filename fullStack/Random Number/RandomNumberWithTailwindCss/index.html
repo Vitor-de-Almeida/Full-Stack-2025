@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
-    <div class="relative w-full min-h-screen bg-cover bg-center bg-black " style="background-image: url(img/backgroundimage.png);">
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent"> 
-            <div class="main-cont w-4/5 mx-auto ">
+    <div class="relative w-full min-h-screen bg-cover bg-center bg-black" style="background-image: url(img/backgroundimage.png);">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent">
+            <div class="main-cont w-4/5 mx-auto">
                 <div class="flex my-36 justify-start items-center gap-2">
                     <div class="imagem-tittle">
                         <img class="w-[38px] h-[38px] object-contain" src="img/frameTittle.png" alt="Tittle">
@@ -19,13 +19,13 @@
                     </div>
                 </div>
                 <div class="text-white flex flex-col sm:flex-row justify-between gap-x-8 sm:gap-x-28">
-                    <div class="left-content w-full md:w-1/2 ">
+                    <div class="left-content w-full md:w-1/2">
                         <header>
                             <p class="uppercase font-sora text-overline word-space text-content-secondary">
                                 online - gratuito
                             </p>
                             <h1 class="font-sora text-display-large text-content-primary uppercase my-4">
-                                sorteador <br>   de números
+                                sorteador <br>de números
                             </h1>
                         </header>
                         <section>
@@ -41,7 +41,7 @@
                                 </div>
                             </article>
                             <article class="mt-8">
-                                 <div>
+                                <div>
                                     <div>
                                         <img src="" alt="">
                                     </div>
@@ -49,20 +49,71 @@
                                         <img src="img/littleManFrame.png" alt="Info Emoji" class="w-[20px] h-[20px]">
                                         <p class="text-content-brand text-paragraph-large">Posso escolher o intervalo dos números?</p>
                                     </div>
-                                    </div>
-                                    <div>
+                                </div>
+                                <div>
                                     <p class="text-content-secondary text-paragraph-medium">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
-                                    </div>
+                                </div>
                             </article>
                         </section>
                     </div>
-                    <div class="right-content w-full md:w-1/2 bg-red-600">
-                        <p>asdasd</p>
+                    <div class="right-content w-full md:w-1/2">
+                        <div class="sortear-content">
+                            <div>
+                                <h1 class="text-content-primary text-display-small uppercase mb-4">
+                                    quero sortear
+                                </h1>
+                                <p class="text-content-secondary text-paragraph-medium">Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                            </div>
+                            <div class="flex gap-x-4">
+                                <div class="w-20">
+                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">Números</p>
+                                    <h3 class="text-content-primary text-display-small text-center border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-2">2</h3>
+                                </div>
+                                <div class="w-20">
+                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">DE</p>
+                                    <h3 class="text-content-primary text-display-small text-center border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-2">4</h3>
+                                </div>
+                                <div class="w-20">
+                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">DE</p>
+                                    <h3 class="text-content-primary text-display-small text-center border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-2">100</h3>
+                                </div>
+                            </div>
+                            <div id="button-toggle-no-repeat" class="mt-4">
+                                <label for="toggle-no-repeat" class="flex items-center gap-x-2 cursor-pointer">
+                                    <input type="checkbox" id="toggle-no-repeat" class="hidden peer">
+                                    <div class="w-10 h-6 bg-purple-500 rounded-full relative transition peer-checked:bg-purple-700">
+                                        <div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-all duration-500 peer-checked:left-5"></div>
+                                    </div>
+                                    <span class="text-white text-sm">Não repetir número</span>
+                                </label>
+                            </div>
+                            <div class="flex items-center gap-x-2 border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-12 justify-center">
+                                <h2 class="text-content-primary text-xl font-bold uppercase">sortear</h2>
+                                <span style="font-size: 2rem; color: white;">→</span>
+                            </div>
+                        </div>
+                        <!-- <div class="result-content w-full md:w-1/2">
+                            <div class="result-tittle">
+                                <h2 class="text-content-primary text-paragraph-large font-bold uppercase mb-4 text-center">
+                                    resultados do sorteio
+                                </h2>
+                            </div>
+                            <div class="result-numbers">
+                                <h3 class="text-content-brand text-display-medium border p-4">2</h3>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-x-2 border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-12 justify-center">
+                                    <h2 class="text-content-primary text-xl font-bold uppercase">sortear novamente</h2>
+                                    <span style="font-size: 2rem; color: white;" class="px-2">↻</span>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
 
