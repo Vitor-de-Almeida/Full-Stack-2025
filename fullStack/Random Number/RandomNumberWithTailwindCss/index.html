@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Random Number Generator</title>
     <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
     <div class="relative w-full min-h-screen bg-cover bg-center bg-black" style="background-image: url(img/backgroundimage.png);">
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-transparent">
+        <div class="absolute inset-0 bg-linear-to-b from-black via-black/80 to-transparent">
             <div class="main-cont w-4/5 mx-auto">
                 <div class="flex my-36 justify-start items-center gap-2">
                     <div class="imagem-tittle">
-                        <img class="w-[38px] h-[38px] object-contain" src="img/frameTittle.png" alt="Tittle">
+                        <img class="w-[38px] h-[38px] object-contain" src="img/frameTittle.png" alt="Title">
                     </div>
                     <div class="tittle text-white">
                         <p class="font-extrabold font-sora text-2xl uppercase">numbers</p>
@@ -22,10 +22,10 @@
                     <div class="left-content w-full md:w-1/2">
                         <header>
                             <p class="uppercase font-sora text-overline word-space text-content-secondary">
-                                online - gratuito
+                                online - free
                             </p>
                             <h1 class="font-sora text-display-large text-content-primary uppercase my-4">
-                                sorteador <br>de números
+                                random <br>number generator
                             </h1>
                         </header>
                         <section>
@@ -33,11 +33,11 @@
                                 <div>
                                     <div class="flex gap-x-2">
                                         <img src="img/littleManFrame.png" alt="Info Emoji" class="w-[20px] h-[20px]">
-                                        <p class="text-content-brand text-paragraph-large">Como funciona o sorteador de números?</p>
+                                        <p class="text-content-brand text-paragraph-large">How does the random number generator work?</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="text-content-secondary text-paragraph-medium">O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                                    <p class="text-content-secondary text-paragraph-medium">The generator uses a random generation algorithm to create numbers within the range specified by the user.</p>
                                 </div>
                             </article>
                             <article class="mt-8">
@@ -47,67 +47,73 @@
                                     </div>
                                     <div class="flex gap-x-2">
                                         <img src="img/littleManFrame.png" alt="Info Emoji" class="w-[20px] h-[20px]">
-                                        <p class="text-content-brand text-paragraph-large">Posso escolher o intervalo dos números?</p>
+                                        <p class="text-content-brand text-paragraph-large">Can I choose the number range?</p>
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="text-content-secondary text-paragraph-medium">Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+                                    <p class="text-content-secondary text-paragraph-medium">Yes, you can set the minimum and maximum values for the range of numbers to be drawn.</p>
                                 </div>
                             </article>
                         </section>
                     </div>
                     <div class="right-content w-full md:w-1/2">
-                        <div class="sortear-content">
+                        <div id="sort-content" class="sortear-content block">
                             <div>
                                 <h1 class="text-content-primary text-display-small uppercase mb-4">
-                                    quero sortear
+                                    I want to draw
                                 </h1>
-                                <p class="text-content-secondary text-paragraph-medium">Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                                <p class="text-content-secondary text-paragraph-medium">Set the range and quantity of numbers, click "Draw" and see the results on screen. It's fast and easy!</p>
                             </div>
                             <div class="flex gap-x-4">
                                 <div class="w-20">
-                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">Números</p>
-                                    <h3 class="text-content-primary text-display-small text-center border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-2">2</h3>
+                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">Numbers</p>
+                                    <label for="numbers-amount">
+                                        <input type="text" id="numbers-amount" class="text-center border bg-background-tertiary border-transparent rounded-[0.2rem] p-1 mt-2 mr-1 w-20 h-12 -webkit-appearance: none; -moz-appearance: textfield;">
+                                    </label>
                                 </div>
                                 <div class="w-20">
-                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">DE</p>
-                                    <h3 class="text-content-primary text-display-small text-center border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-2">4</h3>
+                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">FROM</p>
+                                    <label for="numbers-from">
+                                        <input type="text" id="numbers-from" class="text-center border bg-background-tertiary border-transparent rounded-[0.2rem] p-1 mt-2 mr-1 w-20 h-12 -webkit-appearance: none; -moz-appearance: textfield;">
+                                    </label>
                                 </div>
                                 <div class="w-20">
-                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">DE</p>
-                                    <h3 class="text-content-primary text-display-small text-center border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-2">100</h3>
+                                    <p class="text-content-secondary text-paragraph-medium uppercase mt-8 text-center">TO</p>
+                                    <label for="numbers-to">
+                                        <input type="text" id="numbers-to" class="text-center border bg-background-tertiary border-transparent rounded-[0.2rem] p-1 mt-2 mr-1 w-20 h-12  -webkit-appearance: none; -moz-appearance: textfield;">
+                                    </label>
                                 </div>
                             </div>
                             <div id="button-toggle-no-repeat" class="mt-4">
-                                <label for="toggle-no-repeat" class="flex items-center gap-x-2 cursor-pointer">
+                                <label for="toggle-no-repeat" class="flex items-center gap-x-2 ">
                                     <input type="checkbox" id="toggle-no-repeat" class="hidden peer">
-                                    <div class="w-10 h-6 bg-purple-500 rounded-full relative transition peer-checked:bg-purple-700">
-                                        <div class="absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-all duration-500 peer-checked:left-5"></div>
+                                    <div class="w-10 h-6 bg-purple-500 rounded-full relative transition peer-checked:bg-purple-700 peer-checked:[&>.white-button]:translate-x-4">
+                                        <div class="white-button absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-all duration-500 peer-checked:translate-x-4"></div>
                                     </div>
-                                    <span class="text-white text-sm">Não repetir número</span>
+                                    <span class="text-white text-sm">Don't repeat numbers</span>
                                 </label>
                             </div>
-                            <div class="flex items-center gap-x-2 border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-12 justify-center">
-                                <h2 class="text-content-primary text-xl font-bold uppercase">sortear</h2>
+                            <div id="button-sort" class="flex items-center gap-x-2 border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-12 justify-center cursor-pointer">
+                                <h2 class="text-content-primary text-xl font-bold uppercase">draw</h2>
                                 <span style="font-size: 2rem; color: white;">→</span>
                             </div>
                         </div>
-                        <!-- <div class="result-content w-full md:w-1/2">
+                        <div id="result-content" class="result-content hidden">
                             <div class="result-tittle">
                                 <h2 class="text-content-primary text-paragraph-large font-bold uppercase mb-4 text-center">
-                                    resultados do sorteio
+                                    draw results
                                 </h2>
                             </div>
                             <div class="result-numbers">
-                                <h3 class="text-content-brand text-display-medium border p-4">2</h3>
+                                <h3 class="text-content-brand text-display-medium " id="result-numbers"></h3>
                             </div>
                             <div>
-                                <div class="flex items-center gap-x-2 border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-12 justify-center">
-                                    <h2 class="text-content-primary text-xl font-bold uppercase">sortear novamente</h2>
+                                <div id="button-sort-again" class="flex items-center gap-x-2 border bg-background-tertiary border-transparent rounded-[0.2rem] px-4 mt-12 justify-center">
+                                    <h2 class="text-content-primary text-xl font-bold uppercase">draw again</h2>
                                     <span style="font-size: 2rem; color: white;" class="px-2">↻</span>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
