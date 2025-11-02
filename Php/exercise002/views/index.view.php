@@ -3,7 +3,6 @@
     <button type="submit">🔎</button>
 </form>
 
-<!-- Lista de Livros -->
 <section class="grid gap-4 mx-4 md:mx-0 lg:mx-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 md:grid-rows-2 lg:grid-rows-3">
     <?php foreach ($livros as $livro) : ?>
         <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
