@@ -1,4 +1,4 @@
-<?=$livro->titulo?>
+
  
 <div class="p-2 rounded border-stone-800 border-2 bg-stone-900">
      <div class="flex">
