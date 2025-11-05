@@ -24,12 +24,6 @@
                             </a>
                         </li>
                     <?php endforeach; ?>
-                    <li>
-                        <a href="#">
-                                <img class="h-8 hover:animate-bounce" src="img/twitter.png" alt="Twitter Icon">
-                        </a>
-                    </li>
-                    
                 </ul>
                 
             </div>
