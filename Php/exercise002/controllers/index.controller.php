@@ -1,7 +1,6 @@
 <?php
 
-$pesquisa = $_GET['pesquisar'] ?? null;
-$livros = (new DB)->livros($pesquisa);
+$livros = (new DB)->livros($_GET['pesquisar'] ?? null);
 
 view('index', compact('livros'));
 

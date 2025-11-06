@@ -10,7 +10,7 @@
     <header class="bg-stone-900">
         <nav class="mx-auto max-w-screen-lg flex justify-between py-4 px-4 lg:px-0">
             <div class="font-bold text-xl tracking-wide">
-                Book Wise
+                <a href="http://localhost:3000">Book Wise</a>
             </div>
             <ul class="flex space-x-4 font-bold">
                 <li><a href="/" class="text-emerald-600">Explorar</a></li>

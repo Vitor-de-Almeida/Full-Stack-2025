@@ -11,24 +11,34 @@ class DB {
 
     public function livros ($pesquisa = null) {
         if ($pesquisa && trim($pesquisa) !== '') {
-            $sql = "select * from livros where usuario_id = 1 and titulo like '%$pesquisa%'";
-            echo $sql . "<br>"; 
-            $query = $this->db->query($sql);
-        } else {
-            $query = $this->db->query("select * from livros");
+            if (is_numeric($pesquisa)) {
+                $prepare = $this->db->prepare("select * from livros where id = :id");
+                $prepare->bindValue(':id', $pesquisa);
+                $prepare->execute();
+                $prepare->setFetchMode(PDO::FETCH_CLASS, 'Livro');
+                return $prepare->fetchAll();
+            }
+            else {
+            $prepare = $this->db->prepare("select * from livros where (titulo LIKE :texto or descricao LIKE :texto or autor LIKE :texto)");
+            $prepare->bindValue(':texto', "%{$pesquisa}%");
+            $prepare->execute();
+            $prepare->setFetchMode(PDO::FETCH_CLASS, 'Livro');
+            return $prepare->fetchAll();
+            }
         }
-        
-        $items = $query->fetchAll();
-        return array_map(fn($item) => Livro::make($item), $items);
-    }
-    public function livro ($id) {
-        $query = $this->db -> query("select * from livros where id = $id");
-        $item = $query->fetch();
-        if (!$item) {
-            return null;
+        $prepare = $this->db->prepare("select * from livros");
+        $prepare->execute();
+        $prepare->setFetchMode(PDO::FETCH_CLASS, 'Livro');
+        return $prepare->fetchAll();
         }
-        return Livro::make($item);
-    }
-}
-
+        public function livro ($id) {
+            $prepare = $this->db -> prepare("select * from livros where id = :id");
+            $prepare->bindValue(':id', $id);    
+            $prepare->execute();
+            $prepare->setFetchMode(PDO::FETCH_CLASS, 'Livro');
+            return $prepare->fetch() ?? null;
+        }
+    }  
 ?>
+
+

@@ -1,8 +1,6 @@
 <?php
 
-$id = (int) $_GET['id'];
-
-$livro = (new DB)->livro($id);
+$livro = (new DB)->livro((int) $_GET['id']);
 
 if (!$livro) {
     abort(404);
