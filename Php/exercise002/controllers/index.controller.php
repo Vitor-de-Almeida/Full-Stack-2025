@@ -2,11 +2,8 @@
 
 $pesquisar = $_GET['pesquisar'] ?? null;
 
-$db = new DB();
-
 if(is_numeric($pesquisar)) {
-    $livros = $db->query
-    (
+    $livros = $db->query(
         query: "select * from livros where id = :id", 
         class: Livro::class, 
         params: [':id' => (int) $pesquisar]
