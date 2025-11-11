@@ -6,10 +6,15 @@ class DB {
     
     private $db;
     public function __construct($config) {
-
-
-        $connectionString = "{$config['driver']}:{$config['database']}";
-        $this->db = new PDO($connectionString);
+        
+        if ($config['driver'] === 'mysql') {
+            $connectionString = "mysql:host={$config['host']};port={$config['port']};dbname={$config['database']};charset={$config['charset']}";
+            $this->db = new PDO($connectionString, $config['username'], $config['password']);
+        } else {
+            // SQLite
+            $connectionString = "sqlite:{$config['database']}";
+            $this->db = new PDO($connectionString);
+        }
 
     }
 
