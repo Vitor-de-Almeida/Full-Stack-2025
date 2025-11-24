@@ -6,16 +6,23 @@ class DB {
     
     private $db;
     public function __construct($config) {
-        
-        if ($config['driver'] === 'mysql') {
-            $connectionString = "mysql:host={$config['host']};port={$config['port']};dbname={$config['database']};charset={$config['charset']}";
-            $this->db = new PDO($connectionString, $config['username'], $config['password']);
+        if ($config['driver'] === 'sqlite') {
+            $this->db = new PDO($this->getDsn($config));
         } else {
-            // SQLite
-            $connectionString = "sqlite:{$config['database']}";
-            $this->db = new PDO($connectionString);
+            $this->db = new PDO($this->getDsn($config), username: $config['username'], password: $config['password']);
         }
+    }
 
+    private function getDsn($config) {
+        $driver = $config['driver'];
+        unset($config['driver']);
+        $dsn = $driver . ':' . http_build_query($config, '', ';');
+        if ($driver === 'sqlite') {
+            $dsn = $driver . ':' . $config['database'];
+        } else {
+            $dsn = $driver . ':' . http_build_query($config, '', ';');
+        }
+        return $dsn;
     }
 
     public function query($query, $class = null, $params = []) {
