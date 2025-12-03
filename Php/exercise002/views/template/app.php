@@ -13,8 +13,8 @@
                 <a href="http://localhost:3000">Book Wise</a>
             </div>
             <ul class="flex space-x-4 font-bold">
-                <li><a href="/" class="text-emerald-600">Explorar</a></li>
-                <li><a href="/meus-livros.php" class="hover:underline">Meus livros</a></li>
+                <li><a href="/" class="text-emerald-600">Explore</a></li>
+                <li><a href="/meus-livros.php" class="hover:underline">My Books</a></li>
             </ul>
             <ul>
                 <li><a href="/login" class="hover:underline">Login</a></li>

@@ -1,22 +1,21 @@
 <?php
 
-$pesquisar = $_GET['pesquisar'] ?? null;
+$search = $_GET['search'] ?? null;
 
-if(is_numeric($pesquisar)) {
-    $livros = $db->query(
-        query: "select * from livros where id = :id", 
-        class: Livro::class, 
-        params: [':id' => (int) $pesquisar]
+if (is_numeric($search)) {
+    $books = $db->query(
+        query: "select * from books where id = :id", 
+        class: Book::class, 
+        params: [':id' => (int) $search]
     )->fetchAll();
-    
 } else {
-    $livros = $db->query(
-        query: "select * from livros where (titulo LIKE :texto or descricao LIKE :texto or autor LIKE :texto)", 
-        class: Livro::class, 
-        params: [':texto' => "%{$pesquisar}%"]
+    $books = $db->query(
+        query: "select * from books where (title LIKE :text or description LIKE :text or author LIKE :text)", 
+        class: Book::class, 
+        params: [':text' => "%{$search}%"]
     )->fetchAll();
 }
 
-view('index', ['livros' => $livros]);
+view('index', ['books' => $books]);
 
 ?>

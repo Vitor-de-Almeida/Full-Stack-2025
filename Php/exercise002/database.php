@@ -1,8 +1,8 @@
 <?php 
 
-/*Representação de 1 regstro de banco de dados em forma de classe*/
+/*Database record representation as a class*/
 
-class DB {
+class Database {
     
     private $db;
     public function __construct($config) {
@@ -39,7 +39,7 @@ class DB {
 
 }
 
-$db = new DB($config['database']);
+$db = new Database($config['database']);
 ?>
 
 

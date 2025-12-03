@@ -1,9 +1,7 @@
 <?php
 
-if ($_server['request_method' === 'POST']) {
-    $database->query()
-}
+$message = $_GET['message'] ?? null;
 
-view('login')
+view('login', ['message' => $message]);
 
 ?>
