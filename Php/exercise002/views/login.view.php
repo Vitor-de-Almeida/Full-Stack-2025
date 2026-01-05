@@ -5,16 +5,16 @@
         </h1>
         <form class="p-4 space-y-4" action="" method="post">
             <div class="flex flex-col">
-                <label class="text-stone-400 mb-1" for="email-login">
+                <label class="text-stone-400 mb-1" for="email">
                     Email
                 </label>
-                <input type="email" name="email-login" required class="border-stone-800 border-2 rounded-md bg-stone-900 text-sm focus:outline-none px-2 py-1"/>
+                <input type="email" name="email" required class="border-stone-800 border-2 rounded-md bg-stone-900 text-sm focus:outline-none px-2 py-1"/>
             </div>
             <div class="flex flex-col">
-                <label class="text-stone-400 mb-1" for="password-login">
+                <label class="text-stone-400 mb-1" for="password">
                     Password
                 </label>
-                <input type="password" name="password-login" required class="border-stone-800 border-2 rounded-md bg-stone-900 text-sm focus:outline-none px-2 py-1">
+                <input type="password" name="password" required class="border-stone-800 border-2 rounded-md bg-stone-900 text-sm focus:outline-none px-2 py-1">
             </div>
             <button type="submit" class="border-stone-800 bg-stone-900 text-stone-400 px-4 py-2 rounded-md border-2 hover:bg-stone-800">
                 Log In

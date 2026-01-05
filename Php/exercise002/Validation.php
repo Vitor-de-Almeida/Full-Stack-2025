@@ -12,10 +12,14 @@ class Validation {
             foreach($fieldRules as $rule) {
                 if ($rule === 'confirmed') {
                     $validation->$rule($field, $data[$field], $data["confirm-{$field}"]);
+                } 
+                else if (str_contains($rule, ':')) {
+                    $rule = explode(':', $rule);
+                    $validation->{$rule[0]}($rule[1], $field, $data[$field]);
                 } else {
                     $validation->$rule($field, $data[$field]);
                 }
-            }
+             }
         }
         return $validation;
     }
@@ -39,7 +43,29 @@ class Validation {
         }
     }
 
+    private function min($min, $field, $value) {
+        if (strlen($value) < $min) {
+            $this->validations [] = "The {$field} must be at least {$min} characters";
+        }
+    }
+
+    private function max($max, $field, $value) {
+        if (strlen($value) > $max) {
+            $this->validations [] = "The {$field} must be less than {$max} characters";
+        }
+    }
+
+    private function strong($field, $value) {
+        if (!preg_match('/[0-9]/', $value)) {
+            $this->validations [] = "The {$field} must contain at least one number";
+        }
+        if (!preg_match('/[!@#$%^&*]/', $value)) {
+            $this->validations [] = "The {$field} must contain at least one special character";
+        }
+    }
+
     public function hasErrors() {
+        $_SESSION['validations'] = $this->validations;
         return sizeof($this->validations) > 0;
     }
 }
