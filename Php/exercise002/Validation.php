@@ -65,7 +65,8 @@ class Validation {
     }
 
     public function hasErrors() {
-        $_SESSION['validations'] = $this->validations;
+        flash()->push('validations', $this->validations);
+        //$_SESSION['validations'] = $this->validations;
         return sizeof($this->validations) > 0;
     }
 }

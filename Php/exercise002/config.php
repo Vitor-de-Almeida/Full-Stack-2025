@@ -13,5 +13,4 @@ return [
         // 'password' => 'Vr30039191@@',
         // 'charset' => 'utf8',
     ],
-];
-?>
+];?>

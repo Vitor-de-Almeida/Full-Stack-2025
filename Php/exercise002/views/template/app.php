@@ -19,7 +19,7 @@
             <ul>
                 <?php if(isset($_SESSION['authenticated'])): ?>
                     <li>
-                        <a href="/logout" class="hover:underline">Hi, <?= $_SESSION['authenticated']['name'] ?>!</a>
+                        <a href="/logout" class="hover:underline">Hi, <?= $_SESSION['authenticated']->name ?>!</a>
                     </li>
                 <?php else: ?>
                     <li><a href="/login" class="hover:underline">Login</a></li>

@@ -26,11 +26,11 @@
             Register
         </h1>
         <form class="p-4 space-y-4" action="/register" method="post">
-            <?php if (isset($_SESSION['validations']) && sizeof($_SESSION['validations']) > 0): ?>
+            <?php if ($validations = flash()->get('validations')): ?>
                 <div class="px-4 py-1">
                     <div class="border-stone-800 bg-stone-900 text-stone-400 px-4 py-1 my-2 rounded-md border-2">
                                 Errors:
-                                <?php foreach ($_SESSION['validations'] as $validation): ?>
+                                <?php foreach ($validations as $validation): ?>
                         <div class="border-stone-800 bg-stone-900 text-stone-400 px-4 py-1 my-2 rounded-md border-2">
                             <?=$validation?>
                         </div>
