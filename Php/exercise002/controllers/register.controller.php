@@ -1,16 +1,16 @@
 <?php
 
-require 'Validation.php';
+require 'validation.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $validation = Validation::validate([
         'name' => ['required'],
-        'email' => ['required', 'email', 'confirmed'],
+        'email' => ['required', 'email', 'confirmed', 'unique:users'],
         'password' => ['required', 'min:8', 'max:18', 'strong'],
     ], $_POST);
 
-    if($validation->hasErrors()) {
+    if($validation->hasErrors('register')) {
         header('location: /login');
         exit(); 
     }
@@ -20,12 +20,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             params: [
                 ':name' => $_POST['name'], 
                 ':email' => $_POST['email'], 
-                ':password' => $_POST['password']
+                ':password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
             ]
         );
-    header('location: /login?message=User created successfully');
+    flash()->push('message', 'User created sucessfully');
+    header('location: /login');
     exit();
     
 }
+
+header('location: /login');
+exit();
 
 ?>

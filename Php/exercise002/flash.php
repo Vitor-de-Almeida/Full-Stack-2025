@@ -4,10 +4,12 @@ class Flash {
         $_SESSION["flash_$key"] = $value;
     }
     public function get($key) {
-        if($value = $_SESSION["flash_$key"]) {
+        if(!isset($_SESSION["flash_$key"])) {
+            return false;
+        }
+        $value = $_SESSION["flash_$key"];
+        unset($_SESSION["flash_$key"]);
         return $value;
     }
-    return false;
-}
 }
 ?>

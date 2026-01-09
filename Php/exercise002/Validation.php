@@ -24,6 +24,24 @@ class Validation {
         return $validation;
     }
 
+
+    private function unique($table, $column, $value) {
+        if (strlen($value) == 0) {
+            return ;
+        }
+        $db = new Database(config('database'));
+
+        $result = $db->query(
+            query: "select * from users where {$column} = :value",
+            params: [':value' => $value]
+        )->fetch();
+
+        if($result) {
+            $this->validations[] = "The {$column} {$value} is already in use.";
+        }
+    }
+
+
     private function required($field, $value) {
         if (strlen($value) === 0) {
             $this->validations [] = "The field {$field} is mandatory";
@@ -64,9 +82,15 @@ class Validation {
         }
     }
 
-    public function hasErrors() {
-        flash()->push('validations', $this->validations);
-        //$_SESSION['validations'] = $this->validations;
+    public function hasErrors($customName = null) {
+        
+        $key = 'validations';
+
+        if ($customName) {
+            $key .= '_' . $customName;
+        }
+        flash()->push($key, $this->validations);
+
         return sizeof($this->validations) > 0;
     }
 }

@@ -1,24 +1,36 @@
 <?php
 
-$message = $_GET['message'] ?? null;
+require __DIR__ . '/../Validation.php';
 
-// 1. Receive the form with email and password
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
-//2. Check the database for the email and password
+
+$validation = Validation::validate([
+    'email' => ['required', 'email'],
+    'password' => ['required'],
+], $_POST);
+
+if($validation->hasErrors('login')) {
+    header('location: /login');
+    exit();
+}
+
 $user = $db->query(
-    query:"select * from users where email = :email and password = :password",
+    query:"select * from users where email = :email",
     class: User::class,
     params: [
         ':email'=>$email,
-        ':password'=>$password
         ]
     )->fetch();
-//3. If the user is found, add that the users is authenticated
+
 if($user) {
+
+    $postPassword = $_POST['password'];
+    $databasePassword = $user->password;
+
     $_SESSION['authenticated'] = $user;
-    $_SESSION['message'] = 'Welcome ' . $user->name . '!';
+    flash()->push('message', 'Welcome ' . $user->name . '!');
     header('location: /');
     exit();
 } else {
@@ -26,8 +38,7 @@ if($user) {
     exit();
 }
 }
-//4. Change the info in the navigation bar to show the user name
 
-view('login', ['message' => $message]);
+view('login');
 
 ?>
