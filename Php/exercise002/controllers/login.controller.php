@@ -26,11 +26,15 @@ $user = $db->query(
 
 if($user) {
 
-    $postPassword = $_POST['password'];
-    $databasePassword = $user->password;
+    if(!password_verify($_POST['password'], $user->password)) {
+        flash()->push('validations_login', ['Email or password not found or incorrect.']);
+        header('location: /login');
+        exit();
+    }
 
     $_SESSION['authenticated'] = $user;
     flash()->push('message', 'Welcome ' . $user->name . '!');
+
     header('location: /');
     exit();
 } else {
