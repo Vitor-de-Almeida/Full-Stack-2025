@@ -25,7 +25,7 @@ function flash() {
 }
 
 function config($key = null) {
-    
+
     $config = require 'config.php';
     if ($key) {
         return $config[$key];
@@ -33,4 +33,10 @@ function config($key = null) {
     return $config;
 }
 
+function auth() {
+    if(!isset($_SESSION['authenticated'])) {
+        return null;
+    }
+    return $_SESSION['authenticated'];
+}
 ?>
