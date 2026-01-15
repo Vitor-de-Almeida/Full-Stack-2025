@@ -9,7 +9,6 @@ if (!empty($comments)) {
     $averageRating = $sumRating / count($comments);
     $averageRating = round($averageRating, 1);
 }
-var_dump($averageRating);
 ?>
 
 <div class="p-2 rounded border-stone-800 border-2 bg-stone-900 mt-6">
@@ -66,7 +65,7 @@ var_dump($averageRating);
             Add a comment about this book
         </h1>
         <form class="p-4 space-y-4" method="post" action="/avaliation-create">
-                <?php if ($validations = flash()->get('validations')): ?>
+                <?php if ($validations = flash()->get('validations_avaliation')): ?>
                         <div class="px-4 py-1">
                             <div class="border-stone-800 bg-stone-900 text-stone-400 px-4 py-1 my-2 rounded-md border-2">
                                         Errors:
@@ -77,7 +76,6 @@ var_dump($averageRating);
                             <?php endforeach; ?>
                             </div>
                         </div>
-                <?php unset($_SESSION['validations_login']); ?>
             <?php endif; ?>
             <div class="flex flex-col">
             <input type="hidden" name="book_id" value="<?= $book->id ?>">

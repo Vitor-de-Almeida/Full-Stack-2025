@@ -1,9 +1,14 @@
 <?php
 
-require 'validation.php';
+require __DIR__ . '/../Validation.php';
 
 if($_SERVER['REQUEST_METHOD'] != 'POST') {
     header('location:/');
+    exit();
+}
+
+if(!auth()) {
+    header('location: /login');
     exit();
 }
 
@@ -12,7 +17,7 @@ $validation = Validation::validate([
     'rating' => ['required'],
 ], $_POST);
 
-if($validation->hasErrors('')) {
+if($validation->hasErrors('avaliation')) {
     header('location: /book?id=' . $_POST['book_id']);
     exit();
 }
