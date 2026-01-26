@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Category extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProductFactory> */
+    /** @use HasFactory<\Database\Factories\CategoryFactory> */
     use HasFactory;
 
     // TableName
-    protected $table = 'products';
+    protected $table = 'categories';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -20,10 +21,5 @@ class Product extends Model
     protected $fillable = [
         'name',
         'description',
-        'price',
-        'slug',
-        'image',
-        'id_user',
-        'id_category',
     ];
 }
