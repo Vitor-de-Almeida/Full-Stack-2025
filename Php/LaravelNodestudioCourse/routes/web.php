@@ -5,8 +5,6 @@ use App\Http\Controllers\ProductController;
 
 Route::resource('products', ProductController::class);
 
-// 
-
 // Route::group([
 //     'prefix' => 'admin',
 //     'as' => 'admin.',
