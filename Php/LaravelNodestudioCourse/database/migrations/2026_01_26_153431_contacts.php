@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('number');
             $table->string('WhatsApp');
             $table->timestamps();
-            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('id_user')->unique();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
            
         });

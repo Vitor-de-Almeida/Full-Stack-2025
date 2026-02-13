@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use Termwind\Components\Raw;
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::resource('products', ProductController::class);
 

@@ -18,7 +18,7 @@ class ProductController extends Controller
         $name = "Rodrigo";
         $age = 20;
 
-        return view('site.company', ['name' => $name, 'age' => $age]);
+        return view('site.home', ['name' => $name, 'age' => $age]);
     }
 
     /**
