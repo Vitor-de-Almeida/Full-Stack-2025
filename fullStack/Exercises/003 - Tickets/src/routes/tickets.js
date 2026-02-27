@@ -1,5 +1,6 @@
 import { create } from "../controllers/create.js"
 import { index } from "../controllers/index.js"
+
 export const tickets = [
     {
         method: "POST",
