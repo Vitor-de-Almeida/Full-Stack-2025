@@ -9,11 +9,10 @@ export function routeHandler(request, response) {
         return route.method === request.method && route.path.test(request.url)
     })
     if (route) {
-    const routeParams = request.url.match(route.path)
+    
+    //const routeParams = request.url.match(route.path)
 
-    const { query } = routeParams.groups
-
-    console.log(extractQueryParams(query))
+    //const { query } = routeParams.groups
 
     return route.controller({ request, response, database })
 }

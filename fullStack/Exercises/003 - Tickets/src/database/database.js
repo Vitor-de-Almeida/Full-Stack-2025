@@ -31,7 +31,7 @@ export class Database {
     }
 
     select(table) {
-        let data = this.#database[table]
+        let data = this.#database[table] ?? [];
         return data
     }
 }
