@@ -7,7 +7,8 @@
       "user_name": "Vitor Renan",
       "status": "closed",
       "created_at": "2025-10-13T13:29:49.941Z",
-      "updated_at": "2026-03-09T16:37:05.494Z"
+      "updated_at": "2026-03-09T18:37:09.407Z",
+      "solution": "Equipment switched"
     },
     {
       "id": "78cce250-b126-45ef-9a1e-ac209a864e48",
@@ -19,13 +20,14 @@
       "updated_at": "2026-03-09T15:32:33.212Z"
     },
     {
-      "id": "6a99b1ec-c5d5-4b39-ac57-6a4e6206d120",
-      "equipment": "Keyboard RGB",
-      "description": "The keysboards does not work",
-      "user_name": "Guise",
+      "id": "18d1f8e4-901e-440e-a8b6-79a88400ab31",
+      "equipment": "Computer",
+      "description": "The machine restarts everytime",
+      "user_name": "Diego",
       "status": "closed",
-      "created_at": "2026-03-09T15:34:51.624Z",
-      "updated_at": "2026-03-09T15:38:01.487Z"
+      "created_at": "2026-03-09T18:40:10.759Z",
+      "updated_at": "2026-03-09T18:40:58.163Z",
+      "solution": "Switched memory of computer"
     }
   ]
 }

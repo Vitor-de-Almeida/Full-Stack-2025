@@ -1,0 +1,17 @@
+{
+  "name": "004---api-rest",
+  "version": "1.0.0",
+  "description": "Creating an API REST with Node.js",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "author": "Vitor",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
