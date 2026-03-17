@@ -1,5 +1,5 @@
 import express from "express";
-import { myMiddleware } from "./middlewares/my-middleware";
+import { routes } from "./routes";
 
 const PORT = 3333;
 
@@ -7,16 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(myMiddleware);
-
-app.get("/products", (request,response) => {
-    response.send("Hello World");
-})
-
-app.post("/products", (request,response) => {
-    const {name, price} = request.body;
-    response.status(201).json({name, price});
-})
+app.use(routes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
