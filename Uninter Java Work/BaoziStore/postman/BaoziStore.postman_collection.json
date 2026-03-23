@@ -1,0 +1,120 @@
+{
+  "info": {
+    "name": "Baozi Store API",
+    "description": "Collection para testes da API Baozi Store (clientes, produtos, pedidos).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    },
+    {
+      "key": "clienteId",
+      "value": "1"
+    },
+    {
+      "key": "produtoId",
+      "value": "1"
+    },
+    {
+      "key": "pedidoId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "1 - Criar cliente (caso fictício)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Vitor Renan de Almeida - RU 4379411\",\n  \"clienteDesde\": \"2026-03-23\"\n}"
+        },
+        "url": "{{baseUrl}}/clientes"
+      }
+    },
+    {
+      "name": "2 - Criar produto (pão de queijo chinês)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Pão de queijo chinês\",\n  \"preco\": 4.50,\n  \"estoque\": true\n}"
+        },
+        "url": "{{baseUrl}}/produtos"
+      }
+    },
+    {
+      "name": "3 - Criar pedido (10 unidades)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"clienteId\": {{clienteId}},\n  \"produtoId\": {{produtoId}},\n  \"quantidade\": 10\n}"
+        },
+        "url": "{{baseUrl}}/pedidos"
+      }
+    },
+    {
+      "name": "4 - Listar todos os clientes",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/clientes"
+      }
+    },
+    {
+      "name": "5 - Listar todos os produtos",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/produtos"
+      }
+    },
+    {
+      "name": "6 - Listar todos os pedidos",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/pedidos"
+      }
+    },
+    {
+      "name": "7 - Cliente por ID",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/clientes/{{clienteId}}"
+      }
+    },
+    {
+      "name": "8 - Produto por ID",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/produtos/{{produtoId}}"
+      }
+    },
+    {
+      "name": "9 - Pedido por ID",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/pedidos/{{pedidoId}}"
+      }
+    }
+  ]
+}

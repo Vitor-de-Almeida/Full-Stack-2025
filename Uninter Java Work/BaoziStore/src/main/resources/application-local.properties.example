@@ -1,0 +1,5 @@
+# Copie este arquivo para application-local.properties e preencha usuário/senha do MySQL.
+# O arquivo application-local.properties está no .gitignore e não deve ir para o Git.
+
+spring.datasource.username=SEU_USUARIO_MYSQL
+spring.datasource.password=SUA_SENHA_MYSQL
