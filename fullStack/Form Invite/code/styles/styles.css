@@ -1,0 +1,40 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    --surface-page: #FEE7D6;      
+    --surface-form: #FFFFFF;   
+    --surface-invite: #FFF5ED;
+    --text-primary: #292524;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+body {
+    background-color: var(--surface-page);
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-section {
+    width:80%;
+    margin: auto;
+    background-color: var(--surface-form);
+}
+
+.form-fieldset {
+    height: 100vh;
+    
+}
+
+.invite-section {
+    width:80%;
+    margin: auto;
+    background-color: var(--surface-invite);
+}
