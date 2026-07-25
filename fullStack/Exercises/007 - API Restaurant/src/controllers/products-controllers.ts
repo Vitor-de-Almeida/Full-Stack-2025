@@ -1,20 +1,39 @@
-import { productsRoutes } from "@/routes/products-routes";
 import { NextFunction, Request, Response } from "express";
-import { AppError } from "@/utils/AppError";
+import { knex } from "@/database/knex"
+import { z } from "zod";
 
 class ProductController {
     async index(request: Request, response: Response, next: NextFunction) {
         try {
             
-            throw new AppError("Test", 400);
-            //return response.json( { message: "Ok" })
+            const products = await knex<ProductRepository>("products")
+            .select()
+            .orderBy("name")
+            
+            return response.json(products)
 
         } catch (error) {
 
             next(error);
 
         }
+    }
+    async create(request: Request, response: Response, next: NextFunction) {
+        try {
+            const bodySchema = z.object({
+                name: z.string({ required_error: "Name is required" }).trim().min(6),
+                price: z.number({ required_error:"Price is required and must be greater than 0" }).gt(0)
+            })
 
+            const { name, price } = bodySchema.parse(request.body)
+
+            await knex<ProductRepository>("products").insert({ name, price })
+
+            return response.status(201).json( { name, price })
+
+        } catch (error) {
+            next(error);
+        }
     }
 }
 
