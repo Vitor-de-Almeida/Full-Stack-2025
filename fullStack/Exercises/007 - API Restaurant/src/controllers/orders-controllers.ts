@@ -53,9 +53,21 @@ class OrdersController {
             const { table_session_id } = request.params
 
             const order = await knex<OrderRepository>("orders")
-            .where({table_session_id: Number(table_session_id)})
+            .select(
+                "orders.id", 
+                "orders.table_session_id", 
+                "orders.product_id", 
+            "products.name"
+        )
+            .join("products", "products.id", "orders.product_id")
+            .where("orders.table_session_id", Number(table_session_id))
+            .first()
 
-            return response.status(200).json()
+            if (!order) {
+                throw new AppError("Order not found", 404)
+            }
+
+            return response.status(200).json({message: "Order found successfully", order})
         } catch (error) {
             next(error)
         }
