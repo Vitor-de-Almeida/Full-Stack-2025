@@ -57,17 +57,42 @@ class OrdersController {
                 "orders.id", 
                 "orders.table_session_id", 
                 "orders.product_id", 
-            "products.name"
+                "products.name",
+                "orders.price",
+                "orders.quantity",
+                knex.raw("(orders.price * orders.quantity) AS total_itens"),
+                "orders.created_at",
+                "orders.updated_at",
         )
             .join("products", "products.id", "orders.product_id")
             .where("orders.table_session_id", Number(table_session_id))
-            .first()
+            .orderBy("orders.created_at", "desc")
+           
 
             if (!order) {
                 throw new AppError("Order not found", 404)
             }
 
             return response.status(200).json({message: "Order found successfully", order})
+        } catch (error) {
+            next(error)
+        }
+    }
+    async show (request: Request, response: Response, next: NextFunction) {
+        try {
+
+            const  table_session_id  = Number(request.params.table_session_id)
+
+            const order = await knex("orders")
+            .select(
+                knex.raw("COALESCE(SUM(orders.price * orders.quantity), 0) AS TOTAL_PRICE"),
+                knex.raw("COALESCE(SUM(orders.quantity), 0) AS TOTAL_ITENS")
+            )
+            .where({table_session_id})
+            .first()
+            
+
+            return response.json(order)
         } catch (error) {
             next(error)
         }
