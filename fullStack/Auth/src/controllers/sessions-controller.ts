@@ -11,7 +11,7 @@ class SessionsController {
 
     const fakeUser ={
 
-      id:1,
+      id:"1",
       name:"Rodrigo",
       password:"123456"
 
