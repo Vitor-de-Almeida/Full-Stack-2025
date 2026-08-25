@@ -13,7 +13,8 @@ class SessionsController {
 
       id:"1",
       name:"Rodrigo",
-      password:"123456"
+      password:"123456",
+      role:"customer"
 
     }
 
@@ -24,7 +25,9 @@ class SessionsController {
     const { secret, expiresIn } = authConfig.jwt;
 
     const token = sign(
-      {},
+      {
+        role:fakeUser.role
+      },
       secret,
       {
         expiresIn,
