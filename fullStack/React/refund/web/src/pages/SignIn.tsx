@@ -2,6 +2,9 @@ import { useActionState } from "react";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import {z, ZodError } from "zod"
+import { api } from "../services/api";
+import { AxiosError } from "axios";
+import { useAuth } from "../hooks/useAuth";
 
 const signInScheme = z.object ({
  
@@ -14,6 +17,8 @@ const signInScheme = z.object ({
 export function SignIn() {
 
   const [state, formAction, isLoading ] = useActionState(signIn, null)
+
+  const auth = useAuth()
  
 
   async function signIn(_: any, formData: FormData) {
@@ -23,9 +28,12 @@ export function SignIn() {
       const data = signInScheme.parse({
         email: formData.get("email"),
         password: formData.get("password"),
+
       })
 
-      console.log(data)
+      const response = await api.post("/sessions", data)
+
+      auth.saveSession(response.data)
 
     } catch (error) {
       console.log(error)
@@ -34,7 +42,11 @@ export function SignIn() {
         return {message: error.issues[0].message}
       }
 
-      return {message: "não foi possível entrar"}
+      if (error instanceof AxiosError) {
+        return { message: error.response?.data.message }
+      }
+
+      return {message: "não foi possível entrar, email ou senha incorreta"}
 
     }
 
