@@ -7,3 +7,28 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+
+
+import {creatRoot} from 'react-dom/client'
+
+const root = createRoot(document.getElementById('root')
+
+root.ap
+
+
+
+function Teste() {
+  return (
+    <>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+
+      </div>
+    </>
+  )
+}
