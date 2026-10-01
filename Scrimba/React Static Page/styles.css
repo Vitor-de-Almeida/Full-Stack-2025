@@ -8,6 +8,7 @@ body {
     background-color: #23252C;
     font-family: 'Inter', sans-serif;
     margin: auto;
+    height: 100vh;
 }
 
 img {
@@ -29,6 +30,99 @@ main {
     background-color: #1A1B21;
     margin: auto;
     width: 317px;
-    height: 868px;
-    
+    height: 399px;
+}
+
+.name-and-title {
+    height: 100px;
+    width: 100%;
+    color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name-and-title h1 {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.name-and-title h2 {
+    font-size: 12px;
+    line-height: 1.6;
+    color:#F3BF99;
+}
+
+.name-and-title a {
+    font-size: 12px;
+    line-height: 1.6;
+    color:gray;
+    text-decoration: none;
+}
+
+.boxes-email-linkedin {
+    width: 100%;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.email-box img, .linkedin-box img {
+    width: 16px; 
+    height: 16px;   
+}
+
+.email-box a, .linkedin-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.email-box, .linkedin-box {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-box a {
+    color: black;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding-block: 6px;
+    padding-inline: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    padding-inline: 20px;
+}
+
+.linkedin-box a {
+    color: #FFFFFF;
+    background-color: #5093E2;
+    width: 100%;
+    padding-block: 6px;
+    padding-inline: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+footer {
+    background-color: #1A1B21;
+    margin: auto;
+    width: 317px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
 }
