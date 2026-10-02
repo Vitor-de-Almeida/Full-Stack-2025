@@ -16,18 +16,18 @@ export default function PersonalInfo () {
             </div>
             <div className="info">
                 <h1 className="title-about-me">
-                    
+                    About
                 </h1>
                 <p className="text-about-me">
-
+                     Balancing law enforcement with a passion for programming and gaming, your life blends discipline with digital creation. Anchored by your family, you spend your time building PCs and exploring technology.
                 </p>
             </div>
-            <div className="interests">
+            <div className="info">
                 <h1 className="title-interests">
-                    
+                    Interests
                 </h1>
                 <p className="text-interests">
-
+                    Building PCs, exploring technology, programming, gaming, and spending time with family.
                 </p>
             </div>
         </main>
